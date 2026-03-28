@@ -16,7 +16,7 @@ COPY pyproject.toml .
 COPY uv.lock .
 
 # Install project dependencies
-RUN uv sync --locked
+RUN uv sync --locked --no-group dev
 
 COPY . .
 
